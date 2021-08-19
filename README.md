@@ -2,6 +2,10 @@
 
 ![Alt text](screenshot.webp?raw=true "Conditional Custom fields POC")
 
+TODOs...
+- Field parameters, could be good to add some logic around whether to show textarea, title etc..
+- Save boolean state in JSON object.
+
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
 ## Available Scripts
