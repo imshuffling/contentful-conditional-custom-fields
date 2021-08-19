@@ -1,6 +1,6 @@
 # Contentful Conditional Custom Fields POC
 
-https://user-images.githubusercontent.com/739061/130132246-4fe3dd35-6735-4b78-aa8d-1651116d4bae.mov
+![Alt text](screenshot.webp?raw=true "Conditional Custom fields POC")
 
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
