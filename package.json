@@ -2,25 +2,26 @@
   "name": "conditional-custom-fields",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
-    "@contentful/app-sdk": "^3.32.1",
+    "@contentful/app-sdk": "^3.39.0",
     "@contentful/field-editor-single-line": "^0.13.2",
     "@contentful/field-editor-test-utils": "^0.9.0",
-    "@contentful/forma-36-fcss": "^0.3.1",
-    "@contentful/forma-36-react-components": "^3.79.4",
-    "@contentful/forma-36-tokens": "^0.10.1",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.5",
-    "@testing-library/user-event": "^12.7.1",
-    "@types/jest": "^26.0.20",
-    "@types/node": "^14.14.28",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.1",
+    "@contentful/forma-36-fcss": "^0.3.4",
+    "@contentful/forma-36-react-components": "^3.96.0",
+    "@contentful/forma-36-tokens": "^0.10.2",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^14.17.10",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
     "cross-env": "^7.0.3",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-scripts": "4.0.2",
-    "typescript": "^4.1.5"
+    "typescript": "^4.3.5"
   },
   "scripts": {
     "start": "cross-env BROWSER=none react-scripts start",
@@ -44,6 +45,6 @@
     ]
   },
   "devDependencies": {
-    "@types/uuid": "^8.3.0"
+    "@types/uuid": "^8.3.1"
   }
 }
