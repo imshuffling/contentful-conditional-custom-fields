@@ -2,8 +2,11 @@
 
 ![Alt text](screenshot.webp?raw=true "Conditional Custom fields POC")
 
+## Optional Field Parameters
+![image](https://user-images.githubusercontent.com/739061/130260235-8ff9d0e6-83cf-4d03-a883-b4b6b8adc4cc.png)
+Default "Yes" and "No"
+
 ### 📝 TODOs...
-- Field parameters for boolean label names, maybe textarea fieldLabel
 - Save boolean state in JSON object.
 
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
