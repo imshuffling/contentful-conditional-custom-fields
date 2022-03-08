@@ -17,7 +17,6 @@ const Field = (props: FieldProps) => {
   );
 
   const { hideTextLabel = "Hide", showTextLabel = "Show" } = props.sdk.parameters.instance;
-
   const [agreeTerms, setTerms] = useState(true);
 
   useEffect(() => {
@@ -51,7 +50,7 @@ const Field = (props: FieldProps) => {
   };
 
   return (
-    <Form>
+    <Form className="cond-wrap">
       <FieldGroup>
         <CheckboxField
           labelText={agreeTerms ? hideTextLabel : showTextLabel}

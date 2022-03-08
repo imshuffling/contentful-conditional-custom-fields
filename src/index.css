@@ -13,3 +13,8 @@ div {
 .cond-fields > div {
   margin-bottom: 0.5rem;
 }
+
+.cond-wrap {
+  width: calc(100% - 4px);
+  margin: auto;
+}
