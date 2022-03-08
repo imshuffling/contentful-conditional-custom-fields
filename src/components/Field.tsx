@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { React, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   Textarea,
   TextField,
@@ -12,21 +12,22 @@ interface FieldProps {
   sdk: FieldExtensionSDK;
 }
 const Field = (props: FieldProps) => {
+  const { sdk } = props;
+  const [agreeTerms, setTerms] = useState(true);
   const [field, setField] = useState(
-    props.sdk.field.getValue() ?? { title: "", description: "" }
+    sdk.field.getValue() ?? { open: false, title: "", description: "" }
   );
 
-  const { hideTextLabel = "Hide", showTextLabel = "Show" } = props.sdk.parameters.instance;
-  const [agreeTerms, setTerms] = useState(true);
+  const { hideTextLabel = "Hide", showTextLabel = "Show" } = sdk.parameters.instance;
 
   useEffect(() => {
-    props.sdk.window.startAutoResizer();
+    sdk.window.startAutoResizer();
   }, []);
 
   useEffect(() => {
-    if (!!agreeTerms) {
-      props.sdk.field.removeValue();
-      setField({ title: "", description: "" })
+    if (!agreeTerms) {
+      sdk.field.removeValue();
+      setField({ open: false, title: "", description: "" })
     }
   }, [agreeTerms])
 
@@ -34,18 +35,20 @@ const Field = (props: FieldProps) => {
   const handleDescriptionChange = (e) => {
     const value = {
       ...field,
+      open: true,
       description: e.target.value,
     };
-    props.sdk.field.setValue(value);
+    sdk.field.setValue(value);
     setField(value);
   };
 
   const handleTitleChange = (e) => {
     const value = {
       ...field,
+      open: true,
       title: e.target.value,
     };
-    props.sdk.field.setValue(value);
+    sdk.field.setValue(value);
     setField(value);
   };
 
