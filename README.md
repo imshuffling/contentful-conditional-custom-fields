@@ -3,12 +3,8 @@
 https://user-images.githubusercontent.com/739061/157237144-654b456b-9255-497a-9476-6e7028eded7c.mov
 
 
-## Optional Field Parameters
-![image](https://user-images.githubusercontent.com/739061/130260235-8ff9d0e6-83cf-4d03-a883-b4b6b8adc4cc.png)
-Default "Yes" and "No"
-
-### 📝 TODOs...
-- Save boolean state in JSON object.
+## Field Parameters For Checkbox label text
+![image](https://user-images.githubusercontent.com/739061/157237268-0f637f8e-728a-4839-8ea0-e66525a9b512.png)
 
 This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
 
