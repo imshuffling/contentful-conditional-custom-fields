@@ -1,6 +1,7 @@
 # Contentful Conditional Custom Fields POC
 
-![Alt text](screenshot.webp?raw=true "Conditional Custom fields POC")
+https://user-images.githubusercontent.com/739061/157237144-654b456b-9255-497a-9476-6e7028eded7c.mov
+
 
 ## Optional Field Parameters
 ![image](https://user-images.githubusercontent.com/739061/130260235-8ff9d0e6-83cf-4d03-a883-b4b6b8adc4cc.png)
