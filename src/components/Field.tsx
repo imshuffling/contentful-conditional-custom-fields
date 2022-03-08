@@ -16,11 +16,21 @@ const Field = (props: FieldProps) => {
     props.sdk.field.getValue() ?? { title: "", description: "" }
   );
 
-  const [agreeTerms, setTerms] = useState('yes');
+  const { hideTextLabel = "Hide", showTextLabel = "Show" } = props.sdk.parameters.instance;
+
+  const [agreeTerms, setTerms] = useState(true);
 
   useEffect(() => {
     props.sdk.window.startAutoResizer();
-  });
+  }, []);
+
+  useEffect(() => {
+    if (!!agreeTerms) {
+      props.sdk.field.removeValue();
+      setField({ title: "", description: "" })
+    }
+  }, [agreeTerms])
+
 
   const handleDescriptionChange = (e) => {
     const value = {
@@ -41,43 +51,33 @@ const Field = (props: FieldProps) => {
   };
 
   return (
-    <section>
-      <Form>
+    <Form>
       <FieldGroup>
-          <CheckboxField
-            labelText="Yes"
-            value="yes"
-            onChange={(e) => setTerms((e.target as HTMLInputElement).value)}
-            checked={agreeTerms === 'yes'}
-            id="termsCheckboxYes"
-          />
-          <CheckboxField
-            labelText="No"
-            value="no"
-            onChange={(e) => setTerms((e.target as HTMLInputElement).value)}
-            checked={agreeTerms === 'no'}
-            id="termsCheckboxNo"
-          />
-      </FieldGroup>
-
-      {agreeTerms === 'yes' &&
-      <>
-        <TextField
-          onChange={handleTitleChange}
-          textInputProps={{ placeholder: "Title" }}
-          value={field.title}
-          id="title"
+        <CheckboxField
+          labelText={agreeTerms ? hideTextLabel : showTextLabel}
+          value="Yes"
+          onChange={(e) => setTerms(!agreeTerms)}
+          checked={agreeTerms}
+          id="termsCheckboxYesNo"
         />
-        <Textarea
-          placeholder="Description"
-          onChange={handleDescriptionChange}
-          value={field.description}
-          id="description"
-        />
-      </>
-      }
-</Form>
-    </section>
+        {agreeTerms && (
+          <div className="cond-fields">
+            <TextField
+              onChange={handleTitleChange}
+              textInputProps={{ placeholder: "Title" }}
+              value={field.title}
+              id="title"
+            />
+            <Textarea
+              placeholder="Description"
+              onChange={handleDescriptionChange}
+              value={field.description}
+              id="description"
+            />
+          </div>
+        )}
+        </FieldGroup>
+    </Form>
   );
 };
 export default Field;

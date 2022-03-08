@@ -8,3 +8,8 @@ div {
   font: inherit;
   vertical-align: baseline;
 }
+
+
+.cond-fields > div {
+  margin-bottom: 0.5rem;
+}
