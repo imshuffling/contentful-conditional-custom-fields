@@ -1,3 +1,5 @@
+[![Install to Contentful](https://www.ctfstatic.com/button/install-small.svg)](https://app.contentful.com/deeplink?link=apps&id=2c9Hi8zBBNirsefph3sFCh)
+
 # Contentful Conditional Custom Fields POC
 
 https://user-images.githubusercontent.com/739061/157237144-654b456b-9255-497a-9476-6e7028eded7c.mov
